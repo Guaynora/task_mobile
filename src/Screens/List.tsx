@@ -7,22 +7,21 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {getList} from '../helpers/getList';
 
 const List = () => {
   const [lists, setLists] = useState<ListType[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const getList = async () => {
+  const getListData = async () => {
     setIsLoading(true);
-    const url = 'https://6172cfe5110a740017222e2b.mockapi.io/elements';
-    const response = await fetch(url);
-    const data = await response.json();
+    const data = await getList();
     setLists(data);
     setIsLoading(false);
   };
 
   useEffect(() => {
-    getList();
+    getListData();
   }, []);
 
   return (

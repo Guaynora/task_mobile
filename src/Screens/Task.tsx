@@ -43,6 +43,7 @@ const Task = () => {
         </View>
       )}
       <Modal
+        testID="modal"
         animationType="fade"
         visible={modalVisible}
         transparent
