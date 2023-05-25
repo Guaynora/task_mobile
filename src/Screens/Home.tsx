@@ -8,8 +8,16 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 const Home = ({navigation}: Props) => {
   return (
     <View style={styles.container}>
-      <CustomButton text="Task" onPress={() => navigation.navigate('Task')} />
-      <CustomButton text="List" onPress={() => navigation.navigate('List')} />
+      <CustomButton
+        testId="taskButton"
+        text="Task"
+        onPress={() => navigation.navigate('Task')}
+      />
+      <CustomButton
+        testId="listButton"
+        text="List"
+        onPress={() => navigation.navigate('List')}
+      />
     </View>
   );
 };

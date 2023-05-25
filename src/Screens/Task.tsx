@@ -26,7 +26,11 @@ const Task = () => {
 
   return (
     <View style={styles.container}>
-      <CustomButton text="New Task" onPress={() => setModalVisible(true)} />
+      <CustomButton
+        testId="showModal"
+        text="New Task"
+        onPress={() => setModalVisible(true)}
+      />
       {tasks.length > 0 ? (
         tasks.map((task, index) => (
           <View key={index} style={styles.card}>
@@ -50,7 +54,7 @@ const Task = () => {
               onChangeText={setNewTask}
               style={styles.input}
             />
-            <CustomButton text="Add" onPress={handlePress} />
+            <CustomButton testId="addTask" text="Add" onPress={handlePress} />
           </View>
         </View>
       </Modal>
