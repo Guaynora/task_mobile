@@ -9,6 +9,10 @@ $ yarn install
 ```
 You need to compile for the first time in `Android Studio`
 
+### Test
+
+You can run test with `yarn test` or `yarn testreload`
+
 ### Images
 
 ![Screenshot from 2023-05-25 10-24-19](https://github.com/Guaynora/task_mobile/assets/48069126/930c8265-4f14-454f-adab-b9a04a73c0d7)
